@@ -15,10 +15,8 @@ DAO: TodoDAO.java, TodoDAOImpl.java - データベースアクセスを抽象化
 Service: TodoService.java - ビジネスロジックを集約  
 
 ------------------------------------------------------
-![title](https://github.com/user-attachments/assets/6c2dc4f4-b639-4214-b8c9-1fe093d1a00a)
-![task3](https://github.com/user-attachments/assets/4ebb4dd4-a04b-41de-8495-fe7e16ac5670)
-
-
+![title](https://github.com/user-attachments/assets/3943a10b-38f1-4661-9e06-fb0accec5b3c)
+![task3](https://github.com/user-attachments/assets/b3628690-7fe1-4f4e-a71f-0c120ef6a921)
 
 ------------------------------------------------------
 
@@ -127,5 +125,5 @@ index.jsp - アプリケーションのエントリーポイント（TODOリス�
 error.jsp - エラー表示ページ
 
 ---------------------------------------------
-![task2](https://github.com/user-attachments/assets/bc0b5da7-98ab-4ee7-8012-70acc3cd2f3a)
+![task2](https://github.com/user-attachments/assets/f925d3d9-3963-4cce-b18e-4831b56e178e)
 文字の長さによってタスク一覧の形式がボタンを含めて崩れる
