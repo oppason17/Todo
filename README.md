@@ -1,10 +1,12 @@
-Javaを使用したWebベースのTODOリスト管理アプリケーションです。ユーザーはタスクを作成、編集、削除、完了としてマークすることができます。
+Javaを使用したWebベースのTODOリスト管理アプリケーションです。
+AIを使用して作成しました。
+タスクの作成と編集、削除ができます。完了したものは分かりやすく表示します。
 
 開発環境: Eclipse  
 データベース: H2 Database  
 Webフレームワーク: Jakarta Servlet/JSP  
 UI: HTML, CSS, JSP  
-
+使用AI：Claude 3.7Sonnet
 
 このアプリケーションはMVC（Model-View-Controller）アーキテクチャを採用しています
 
@@ -25,44 +27,11 @@ Service: TodoService.java - ビジネスロジックを集約
 
 
 1. TODOリストの表示  
-パス: /todos  
-メソッド: GET  
-実装: TodoServlet.listTodos()  
-サービス: TodoService.getAllTodos()  
-
-
 2. 新規TODOアイテムの追加  
-パス: /todos  
-メソッド: POST (action=add)  
-実装: TodoServlet.addTodo()  
-サービス: TodoService.addTodo()  
-
-
 3. TODOアイテムの編集フォーム表示  
-パス: /todos/edit/{id}  
-メソッド: GET  
-実装: TodoServlet.doGet() 内の編集フォーム表示ロジック  
-
-
 4. TODOアイテムの更新  
-パス: /todos  
-メソッド: POST (action=update)  
-実装: TodoServlet.updateTodo()  
-サービス: TodoService.updateTodo()  
-
-
 5. TODOアイテムの削除  
-パス: /todos  
-メソッド: POST (action=delete)  
-実装: TodoServlet.deleteTodo()  
-サービス: TodoService.deleteTodo()  
-
-
 6. TODOアイテムの完了状態切替  
-パス: /todos  
-メソッド: POST (action=toggle)  
-実装: TodoServlet.toggleTodoStatus()  
-サービス: TodoService.toggleTodoStatus()  
 
 ---------------------------------------------
 
@@ -72,7 +41,7 @@ Service: TodoService.java - ビジネスロジックを集約
 
 1. モデル（Model）  
 Todo.java  
-TODOアイテムの基本構造を定義するクラス。以下のフィールドを持っています  
+TODOアイテムの基本構造を定義するクラス。  
 id: TODOアイテムの一意識別子  
 title: TODOアイテムのタイトル  
 description: 詳細説明  
@@ -96,8 +65,6 @@ TodoDAOインターフェースの実装。H2データベースへのSQL操作�
 3. サービスレイヤー（Service）  
 TodoService.java  
 ビジネスロジックを含むサービスクラス。DAOレイヤーとコントローラー間の仲介役として機能します。  
-TodoDAOの操作をラップ  
-toggleTodoStatus(): TODOアイテムの完了状態を切り替え  
 
 
 4. データベース接続（Util）  
